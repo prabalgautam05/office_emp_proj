@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>remove employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 5px;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      width: 100%;
+      display: flex;
+      background: linear-gradient(45deg, #0a0a0a, #3a4452);
+      color: white;
+      text-transform: capitalize;
+    }
+  </style>
+  <body>
+   <div class="container">
+    <hr>
+    <h1> remove an employee</h1>
+    <hr><br>
+
+    <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    choose employee to remove
+  </button>
+  <ul class="dropdown-menu">
+    {% for emp in emps %}
+
+    <li><a class="dropdown-item" href="/remove_emp/{{emp_id}}">{{emp.first_name}} {{emp.last_name}}</a></li>
+   {% endfor %}
+   
+  </ul>
+</div>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

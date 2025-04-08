@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>add employee</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 5px;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      width: 100%;
+
+      background: linear-gradient(45deg, #0a0a0a, #3a4452);
+      color: white;
+      text-transform: capitalize;
+    }
+    .class1 {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+    }
+    .notice {
+      justify-content: space-evenly;
+      display: flex;
+      border: 10px white solid;
+    }
+    .box1 {
+      justify-content: space-evenly;
+      display: block;
+      border: 2px white solid;
+      box-sizing: content-box;
+    }
+    .box2 {
+      justify-content: space-evenly;
+      display: block;
+      border: 2px white solid;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>add an employee</h1>
+      <div class="notice">
+        <div class="box1">
+          <h3>*department</h3>
+          <ol type="1">
+            <li>Hr</li>
+            <li>marketing</li>
+            <li>administration</li>
+            <li>development</li>
+          </ol>
+        </div>
+
+        <div class="box2">
+          <h3>*role</h3>
+          <ol type="1">
+            <li>Applications engineer</li>
+            <li>Computer programmer</li>
+            <li>.net developer</li>
+            <li>java developer</li>
+            <li>python developer</li>
+            <li>backend developer</li>
+            <li>full stack developer</li>
+          </ol>
+        </div>
+      </div>
+
+      <hr />
+      <form action="/add_emp" method="post">
+        {% csrf_token %}
+
+        <div class="class1">
+          <label for="first_name">first name</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            value="{{first_name}}"
+          />
+
+          <label for="last_name">last name</label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            value="{{last_name}}"
+          />
+        </div>
+        <br />
+        <hr />
+
+        <div class="class1">
+          <label for="salary">salary</label>
+          <input type="number" id="salary" name="salary" value="{{salary}}" />
+
+          <label for="phone">phone</label>
+          <input type="number" id="phone" name="phone" value="{{phone}}" />
+        </div>
+        <br />
+        <hr />
+
+        <div class="class1">
+          <label for="dept">department</label>
+          <input type="number" id="dept" name="dept" value="{{dept}}" />
+
+          <label for="role">role</label>
+          <input type="number" id="role" name="role" value="{{role}}" />
+        </div>
+        <br />
+        <hr />
+
+        <div class="class">
+          <label for="bonus">bonus</label>
+          <input type="number" id="bonus" name="bonus" value="{{bonus}}" />
+        </div>
+        <hr />
+        <br />
+
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <br />
+    <br />
+    <hr />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
