@@ -1,7 +1,12 @@
+asgiref==3.8.1
+Django==5.2
 phonenumbers==8.13.38
 pure_eval==0.2.3
 PyAudio==0.2.14
 pywin32==308
+sqlparse==0.5.3
 standard-aifc==3.13.0
 standard-chunk==3.13.0
+tzdata==2025.2
 wcwidth==0.2.13
+whitenoise==6.9.0
